@@ -1,20 +1,33 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "../styles/Header.css";
 
-let buttonName="Some button";
 
-const handleClick=() => {
-    console.log('hello');
-}
-
-class Header extends Component{
-    render(){
-        return(
-            <header> This header
-                <button className="some-button" onClick={ handleClick }> { buttonName } </button>
-            </header>
-        )
+function Header(props){
+    //let buttonName="Some button";
+    console.log('props:', props);
+    let [count, serNewCount] = useState(0); // счетчик кликов по кнопке
+    //  e  - event
+    const handleClick=(e) => {
+        serNewCount(count+1);
+        console.log('hello', e.target);
     }
+
+    return(
+        <header> This header
+            <button className="some-button" onClick={ handleClick }> {props.buttonName}, clicked {count} times </button>
+        </header>
+    )
 }
+
+
+//class Header extends Component{
+//    render(){
+//        return(
+//            <header> This header
+//                <button className="some-button" onClick={ handleClick }> { buttonName } </button>
+//            </header>
+//        )
+//    }
+//}
 
 export default Header;

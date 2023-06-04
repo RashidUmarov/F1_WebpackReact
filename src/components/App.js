@@ -1,17 +1,31 @@
-import React, { Component } from "react";
+import React, { Fragment } from "react";
 import Header from "./Header";
 import Main from "./Main";
 import "../styles/App.css";
 
-class App extends Component{
-    render(){
+
+function App(){
+    const buttonName="Some button again";
         return (
-            <React.Fragment>
-                <Header/>
-                <Main/>
-            </React.Fragment>
-        );
-    }
+        <Fragment>
+            <Header buttonName={buttonName}/>
+            <Main/>
+        </Fragment>
+    );
 }
+
+
+//const buttonName="Some button again";
+//class App extends Component{
+//
+//    render(){
+//        return (
+//            <React.Fragment>
+//                <Header buttonName={buttonName}/>
+//                <Main/>
+//            </React.Fragment>
+//        );
+//    }
+//}
 
 export default App;
