@@ -1,5 +1,9 @@
 tr.selected-country {
     background-color: yellow !important;
     color: green !important;
-    font-size: 20px;
+}
+
+tr.selected-country  td{
+    background-color: yellow;
+    color: green;
 }

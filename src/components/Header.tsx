@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import * as React from "react";
 import "../styles/Header.css";
 
 
 function Header(props){
     //let buttonName="Some button";
     console.log('props:', props);
-    let [count, serNewCount] = useState(0); // счетчик кликов по кнопке
+    let [count, serNewCount] = React.useState(0); // счетчик кликов по кнопке
     //  e  - event
     const handleClick=(e) => {
         serNewCount(count+1);

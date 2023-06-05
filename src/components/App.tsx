@@ -1,16 +1,17 @@
-import React, { Fragment } from "react";
+import * as React from "react";
 import Header from "./Header";
 import Main from "./Main";
 import "../styles/App.css";
 
 
 function App(){
-    const buttonName="Some button again";
+    let buttonName="Some button again";
+    //buttonName=10;
         return (
-        <Fragment>
+        <>
             <Header buttonName={buttonName}/>
             <Main/>
-        </Fragment>
+        </>
     );
 }
 
